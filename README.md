@@ -32,8 +32,10 @@ Retailer Game Stock Advisor is a web-based machine learning application that pre
 - **Flask**
 - **Pandas**
 - **Scikit-Learn**
-- **HTML5, CSS3, JavaScript**
-- **Jinja2 Templates**
+- **HTML**
+- **CSS**
+- **JavaScript**
+
 - **CSV Dataset (Video Game Sales)**
 
 ---
