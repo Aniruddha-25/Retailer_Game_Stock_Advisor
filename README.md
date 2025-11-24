@@ -44,17 +44,17 @@ Retailer Game Stock Advisor is a web-based machine learning application that pre
 
 1. Clone the Repository
 2. Install Required Dependencies
-  ```
-pip install -r requirements.txt
-  ```
+    ```
+    pip install -r requirements.txt
+    ```
 3. Run the Application
-   ```
+    ```
     python app.py
-   ```
+    ```
 4. Open in Browser
-```
-  http://localhost:5000
-  ```
+    ```
+    http://localhost:5000
+    ```
 5. Workflow
 6. Click 🤖 Train Model and wait for the success message
 7. Enter Year and Stock Quantity
