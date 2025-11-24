@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retailer Game Stock Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎮 Retailer Game Stock Advisor</h1>
+                <p class="subtitle">Predict which games will sell best and maximize your revenue</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Prediction Section -->
+            <section class="prediction-section">
+                <h2>Game Sales Prediction</h2>
+                
+                <!-- Train Model Button -->
+                <div class="train-section">
+                    <button id="trainBtn" class="btn btn-train" onclick="trainModel()">
+                        🤖 Train Model
+                    </button>
+                    <p id="trainStatus" class="train-status"></p>
+                </div>
+
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label for="yearInput">Enter Year:</label>
+                        <input type="number" id="yearInput" min="1980" max="2100" placeholder="e.g., 2025" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxGames">Number of Games to Stock:</label>
+                        <input type="number" id="maxGames" min="1" max="10000" value="6" required>
+                    </div>
+
+                    <button id="predictBtn" class="btn btn-primary" onclick="getPredictions()">
+                        Get Recommendations
+                    </button>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loadingIndicator" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing data and generating predictions...</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message hidden"></div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section hidden" id="resultsSection">
+                <h2>Top Recommended Games for Stocking</h2>
+                <div class="results-summary" id="resultsSummary"></div>
+
+                <div class="games-grid" id="gamesGrid">
+                    <!-- Games will be populated here -->
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Retailer Game Stock Advisor. Powered by Machine Learning</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
