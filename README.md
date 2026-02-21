@@ -1,3 +1,6 @@
+![ER Diagram](https://github.com/user-attachments/assets/4fb7e7ec-3848-4162-969e-c3763318e214)
+
+
 # Retailer Game Stock Advisor
 
 ## Description
